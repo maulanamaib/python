@@ -1,0 +1,36 @@
+
+.search{
+  width: 50%;
+}
+#logo{
+  color: white;
+}
+.sidebar{
+  float: right;
+  border-style: groove;
+  border-color: lightgray;
+  width: 200px;
+  height: 500px;
+}
+.user{
+  background-color: lightgreen;
+  text-align: center;
+  color: red;
+}
+.main{
+  display: flex;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+.main-content{
+  margin-top: 40px;
+}
+#navbar1{
+	display: flex;
+	position: sticky;
+	position: -webkit-sticky;
+}

@@ -1,0 +1,26 @@
+body{
+	font-family: verdana, arial, helvetica, sans-serif;
+	background-color: black;
+	color: white;
+	font-size: 12px;
+	margin: auto;	
+	padding: 20px;	
+}
+#box_judul{
+	position:absolute;
+	height: 90px;
+	width: 900px;
+	background-color: white;
+	padding-top: 0.04px;
+	padding-right: 0.02px;
+	padding-bottom: 0.02px;
+	padding-left: 0.04px;
+	line-height: 0.5px;
+	left: 50px;
+}
+.teks_judul{
+	font-family: verdana, helvetica, sans-serif;
+	font-size:  25px;
+    line-height: 85px;
+	color: Red;
+}

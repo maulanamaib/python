@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+    }
+    li {
+    float: left;
+    }
+    .container{
+    margin-left: 40px;
+    margin-right: 40px;
+    }
+    .navbrand{
+    float: left;
+    font-family: sans-serif;
+    color: #f5f5fa;
+    text-transform: uppercase;
+    padding: 15px 16px;
+    }
+    li a {
+    display: block; color:#f5f5f8;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-weight: 560;
+    }
+    .active, li a:hover {
+    background-color: rgb(196, 195, 195);
+    color: #444;
+    }
+
+    /* content */.content1{
+ background-image: url(img/burger1.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.content2{
+ background-image: url(img/burger2.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.content3{
+ background-image: url(img/burger3.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.pizza1{
+ background-image: url(img/pizza1.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}.pizza2{
+ background-image: url(img/pizza2.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.pizza3{
+ background-image: url(img/pizza3.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.hotdog1{
+ background-image: url(img/hotdog1.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.hotdog2{
+ background-image: url(img/hotdog2.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;}
+.hotdog3{
+ background-image: url(img/hotdog3.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.legs1{
+ background-image: url(img/legs1.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.legs2{
+ background-image: url(img/legs2.jpg);
+ background-size: cover;
+ width: auto;
+ height: 608px;
+}
+.legs3{
+ background-image: url(img/legs3.jpg);
+ background-size: cover;
+ width: auto; height: 608px;
+}
+.accordion {
+ background-color: #444;
+ color: #fff;
+ cursor: pointer;
+ padding: 18px;
+ width: 100%;
+ border: none;
+ outline: none;
+ font-size: 15px;
+ transition: 0.4s;
+ text-align: center;
+ font-weight: 800;
+ text-transform: capitalize;
+}
+ 
+.active, .accordion:hover {
+ background-color: #ccc;
+ color: #444;
+}
+ 
+.panel {
+ padding: 0 18px;
+ background-color: white;
+ max-height: 0; overflow: hidden;
+ transition: max-height 0.2s ease-out;
+}
+.text{
+ color: #fff;
+ font-weight: 800;
+ padding-top: 20px;
+ text-align: center;
+ text-transform: capitalize;
+}
+.black{
+ font-weight: 800;
+ padding-top: 20px;
+ text-align: center;
+ text-transform: capitalize;
+}
+#sosmed{
+ padding: 10px;
+}
+footer{
+ background-color: black; 
+ padding-bottom: 10px;
+}
+footer a{ text-decoration: none;
+ color: #a8a8ac;
+}
+footer a:hover{
+ color: gold;
+}
+  </style>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <script src="https://kit.fontawesome.com/805bfb712a.js" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+<title>AMERICFOOD | Online Food Shop</title>
+</head>
+<body> <!-- navbar -->
+ <nav>
+  <nav>
+    <ul>
+      <div class="container">
+        <li class="navbrand"><h1>AmericFood</h1></li>
+        <li class="active"><a href="burger.html"><i 
+        class="fas fa-hamburger"></i> hamburger</a></li>
+        <li><a href="pizza.html"><i class="fas fapizza-slice"></i> pizza</a></li>
+        <li><a href="hotdog.html"><i class="fas fahotdog"></i> hotdog</a></li>
+        <li><a href="legs.html"><i class="fas fadrumstick-bite"></i> chicken legs</a></li>
+      </div>
+    </ul>
+  </nav>
+</nav>
+<div class="content1"></div>
+ <button class="accordion">King Burger</button>
+  <div class="panel">
+    <div class="content1">
+      <h1 class="text">King Burger</h1>
+      <h2 class="text">Rp. 23,000</h2>
+    </div>
+  </div>
+  <button class="accordion">Queen Burger</button>
+    <div class="panel">
+      <div class="content2">
+        <h1 class="text">Queen Burger</h1>
+        <h2 class="text">Rp. 23,000</h2>
+      </div>
+    </div>
+ <button class="accordion">Prince Burger</button>
+    <div class="panel">
+      <div class="content3">
+        <h1 class="text">Prince Burger</h1>
+        <h2 class="text">Rp. 23,000</h2>
+      </div>
+    </div>
+<footer>
+  <div class="container" style="text-align: center;">
+    <h3 id="sosmed"style="color: gray;">Connect With 
+    Us</h3>
+    <a id="sosmed" href="instagram.com"><img 
+    src="img/ig.png" alt="instagram" style="width: 20px; height: 
+    20px;"></a>
+    <a id="sosmed" href="twitter.com"><img 
+    src="img/twitter.png" alt="twitter" style="width: 20px; height: 
+    20px;"></a> <a id="sosmed" href="youtube.com"><img 
+    src="img/yt.png" alt="yt" style="width: 20px; height: 
+    20px;"></a>
+    <a id="sosmed" href="facebook.com"><img 
+    src="img/fb.png" alt="fb" style="width: 20px; height: 
+    20px;"></a>
+  </div>
+</footer>

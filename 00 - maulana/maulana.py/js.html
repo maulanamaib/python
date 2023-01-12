@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>No 3</title>
+    </head>
+    <body>
+        <div>
+            Buat fungsi untuk menampilkan 20 angka bulat acak dari a s/d b <br>
+            a : <input type="number" id="a"> <br>
+            b : <input type="number" id="b"> <br>
+            <button onclick="klik()">Mulai</button>
+        </div>
+        <div>
+            Output : <br><textarea name="result" id="result" cols="30" rows="1" style="width: 1000px;"></textarea><br>
+            Min : <br>
+            <textarea name="result" id="min" cols="30" rows="1"></textarea> <br>
+            Max : <br>
+            <textarea name="result" id="max" cols="30" rows="1"></textarea> <br>
+            Mean : <br>
+            <textarea name="result" id="mean" cols="30" rows="1"></textarea> <br>
+            Modus : <br>
+            <textarea name="result" id="modus" cols="30" rows="1"></textarea> <br>
+            Median : <br>
+            <textarea name="result" id="tengah" cols="30" rows="1"></textarea> <br>
+
+        </div>
+        <script>
+            function klik(){
+                var a = document.getElementById("a").value
+                var b = document.getElementById("b").value
+                var hasil = []
+                var cek = b - a
+                if(cek > 20){
+                    for(i = 0;i < 20;i+=1){
+                        add = Math.floor(Math.random() * Number(b)) + Number(a)
+                        hasil.push(add)
+                    }
+                }
+                else{
+                    hasil.push("Selisih data a dan b tidak sampai 20")
+                }
+                document.getElementById("result").innerHTML = hasil.join(",")
+                document.getElementById("min").innerHTML = Math.min.apply(null,hasil)
+                document.getElementById("max").innerHTML = Math.max.apply(null,hasil)
+                var jumlah = hasil.reduce(function(x, y){return x + y;}, 0);
+                var panjang = hasil.length
+                var mean = jumlah/panjang
+                document.getElementById("mean").innerHTML = mean
+                function mode(hasil){
+                    if(hasil.length == 0)
+                        return null;
+                    var modeMap = {};
+                    var maxEl = hasil[0], maxCount = 1;
+                    for(var i = 0; i < hasil.length; i++)
+                    {
+                        var el = hasil[i];
+                        if(modeMap[el] == null)
+                            modeMap[el] = 1;
+                        else
+                            modeMap[el]++;  
+                        if(modeMap[el] > maxCount)
+                        {
+                            maxEl = el;
+                            maxCount = modeMap[el];
+                        }
+                    }
+                    return maxEl;
+                }
+                document.getElementById("modus").innerHTML = (mode(hasil))
+                var median = panjang/2
+                var hasilmedian = (hasil[median-1]+hasil[median])/2
+                document.getElementById("tengah").innerHTML = hasilmedian
+            }
+            
+        </script>
+    </body>
+</html>

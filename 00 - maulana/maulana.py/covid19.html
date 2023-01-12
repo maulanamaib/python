@@ -1,0 +1,284 @@
+<html lang="en"><head>
+    <title>Covid-19</title>
+    <style>
+        body, html{
+            background:url('https://www.paho.org/sites/default/files/styles/flexslider_full/public/2020-03/blue-covid-banner.jpg?h=96546727&itok=cZemcbKa');
+
+        }
+        .container{
+            width: 500px;
+            padding: 10px;
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            transform: (-50%,-50%);
+            color: white;
+            background-color: rgba(22, 10, 19, 0.534);
+            border-bottom: black;
+        }
+        .container h2{
+            float: center;
+            font-family: 'SegoeUI';
+            font-size: 30px;
+            text-align: center;
+            padding: 13px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        table{
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        button{
+            font-size: 15px;
+            width: 100px;
+            height: 30px;
+            border: none;
+            color: white;
+            background-color: rgba(22, 79, 236, 0.445);
+            border-radius: 5px;
+            transition: ease-out 0.3s;
+            margin-left: 100px;
+            outline: none;
+            outline-style: unset;
+        }
+        button:hover{
+            cursor: pointer;
+            color: black;
+            background: white;
+        }
+        #hasil{
+            color: black;
+            border: transparent;
+            background-color: rgba(240, 248, 255, 0.61); 
+            padding: 10px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h2>FORM PENDETEKSI COVID-19</h2>
+        <div id="form">
+            <b style="padding: 10px;">Data Diri</b>
+            <form name="form" style="display: block;">
+                <table>
+                    <tbody><tr>
+                        <td><label style="color: azure;" for="nama">Nama Lengkap</label></td>
+                        <td><input type="text" id="nama" placeholder="masukkan nama anda"></td>
+                    </tr>
+                    <tr>
+                        <td><label style="color: azure;" for="nim">NIM</label></td>
+                        <td><input type="number" id="nim"></td>
+                    </tr>
+                    <tr>
+                        <td><label style="color: azure;" for="gender">Jenis kelamin</label></td>
+                        <td style="color: azure;"><label for="gender1"><input type="radio" id="gender" name="kelamin" value="Laki-laki">Laki-laki</label> <br>
+                            <label for="gender2"><input type="radio" id="gender" name="kelamin" value="Perempuan">Perempuan</label></td>
+                    </tr>
+                    <tr>
+                        <td style="color: azure;"><label>Alamat</label></td>
+                        <td><input type="text" id="alamat"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: azure;"><label>No.HP</label></td>
+                        <td><input type="tel" id="085xxx" placeholder="08xxx"></td>
+                    </tr>
+                </tbody></table>
+                <button type="button" onclick="pilihan1()">Next</button>
+            </form>
+        </div>
+        <div id="form1" style="display:none;">
+            <form action="" name="form1">
+                <table>
+                    <tbody><tr>
+                        <td style="color: azure;"><p><b>apakah anda mengalami :</b><br>
+                            1. Demam (≥ 38°C) dan batuk ATAU<br>
+                            2. Terdapat 3 atau lebih gejala/tanda berikut:<br>
+                            (demam (≥ 38°C), batuk kelelahan (fatigue), sakit kepala, myalgia, nyeri tenggorokan, pilek/hidung tersumbat, sesak nafas, mual/muntah, diare, penurunan kesadaran.)
+                        </p></td>
+                    </tr>
+                    <tr>
+                        <td style="color: azure;"><label for="pilihan1">1.</label><input type="radio" name="opsi" id="pilihan1" value="pilihan1">Ya<br>
+                            <label for="pilihan2">2.</label><input type="radio" name="opsi" id="pilihan2" value="pilihan2">Tidak
+                        </td>
+                    </tr>
+                    <tr><td><button type="button" onclick="opsi1go()">Next</button></td></tr>
+                </tbody></table>
+            </form>
+        </div>
+        <div id="pilih1" style="display: none;">
+            <p>Pada 14 hari terakhir:<br>
+                ▪ Tinggal atau berpergian di negara/wilayah indonesia dengan transimisi lokal<br>
+                ▪ Tinggal atau bekerja ditempat yang beresiko (pengungsian, asrama, dll.)<br>
+                ▪ Bekerja di Fasyankes, melakukan investigasi, pemantauan kasus, dan kontak
+            </p>
+            <form action="" name="form2">
+                <br><table>
+                <tbody><tr><td style="color:azure;">apakah anda melakukan salah satu kegiatan dari pernyataan diatas tersebut:</td></tr>
+                <tr>
+                    <td style="color: azure;"><label for="pilihan1ops2">1.</label><input type="radio" name="opsi2" id="pilihan1ops1" value="pilihan1ops1">Ya<br>
+                        <label for="pilihan1ops2">2.</label><input type="radio" name="opsi2" id="pilihan1ops2" value="pilihan2ops2">Tidak
+                    </td>
+                </tr>
+                <tr><td><button type="button" onclick="opsi2go()">Next</button></td></tr>
+            </tbody></table>
+            </form>
+        </div>
+        <div id="pilih2" style="display: none;">
+            <p>Pada 14 hari terakhir:<br>
+                ▪ Tinggal atau berpergian di negara/wilayah indonesia dengan transimisi lokal<br>
+                ▪ Tinggal atau bekerja ditempat yang beresiko (pengungsian, asrama, dll.)<br>
+                ▪ Bekerja di Fasyankes, melakukan investigasi, pemantauan kasus, dan kontak
+            </p>
+            <form action="" name="form2">
+                apakah anda melakukan salah satu kegiatan dari pernyataan diatas tersebut:<br>
+                
+                    <label for="pilihan2ops2">1.</label><input type="radio" name="opsi2" id="pilihan2ops1" value="pilihan1ops1">Ya<br>
+                        <label for="pilihan2ops2">2.</label><input type="radio" name="opsi2" id="pilihan2ops2" value="pilihan2ops2">Tidak
+                    
+                
+                <br><button type="button" onclick="opsi3go()">Next</button>
+            </form>
+        </div>
+        <!-- pilih 3 dan pilih 4 untuk form pilih1 -->
+        <div id="pilih4" style="display: none;">
+            <p>Istirahat yang cukup dan periksakan diri ke Fasilitas Pelayanan Kesehatan untuk tata laksana lebih lanjut.</p>
+            <button type="button" onclick="goform()">back to form</button>
+        </div>
+        <!-- - -->
+        <div id="pilih5" style="display: none;">
+            <p>Lakukan monitoring kesehatan mandiri selama 14 hari</p>
+            <p>jika muncul gejala</p>
+            
+        </div>
+        <div id="pilih3" style="display: none; text-align: center;">
+            <button type="button" onclick="goform()">back to form</button><br>
+            <form action="" name="suspek">
+                <table>
+                    <tbody><tr>
+                        <td style="color: azure;"><label><h3>Suspek :</h3></label></td>
+                    </tr>
+                    <tr><td><label style="color: azure;" for="positif">positif(+)</label></td>
+                        <td><input type="radio" name="suspek" id="positif" value="positif"></td>
+                    </tr>
+                    <tr>
+                        <td><label style="color: azure;" for="negatif">2 kali negatif(-)</label></td>
+                        <td><input type="radio" name="suspek" id="negatif" value="negatif"></td>
+                    </tr>
+                    <tr>
+                        <td><label style="color: azure;" for="anosmia">anosmia &amp; ageusia</label></td>
+                        <td><input type="radio" name="suspek" id="anosmia" value="anosmia"></td>
+                    </tr>
+                    <tr><td><button style="color: azure;" type="button" onclick="checkbox()">cek!</button></td></tr>
+                </tbody></table>
+                <p id="checkbox1"> </p><br>
+                <p id="checkbox2"> </p><br>
+                <p id="checkbox3"> </p>
+            </form>
+
+        </div>
+        <div id="pilih6" style="display: none;">
+            <p>selalu jaga kesehatan dan terapkan protokol kesehatan dalam beraktifitas.</p>
+            <button type="button" onclick="goform()">back to form</button>
+        </div>
+
+        <p id="hasil"> </p>
+        <p id="hasil2"> </p>
+    </div>
+
+    <script>
+        var nama;
+    
+        function pilihan1(){
+            a = document.getElementById('form').style.display="none";
+            b = document.getElementById('form1').style.display = 'block';
+            nama = document.getElementById('form').value;
+            document.getElementById('hasil2').innerHTML='Jika anda pernah kontak langsung dengan kasus probable/konfirmasi COVID-19 dan anda mempunyai gejala dan tidak bergejala, segera lakukan KARANTINA MANDIRI dan SEGERA MELAPOR ke fasilitas pelayanan kesehatan atau dinas kesehhatan setempat.';
+        }
+
+        function opsi1go(){
+            if (document.getElementById('pilihan1').checked==true){
+                document.getElementById('form1').style.display='none';
+                document.getElementById('pilih1').style.display='block';
+
+
+            }
+            else if (document.getElementById('pilihan2').checked==true){
+                document.getElementById('form1').style.display='none';
+                document.getElementById('pilih2').style.display='block';
+
+            }
+            else{
+                alert('Mohon isi terlebih dahulu');
+
+            }
+            // document.getElementById('hasil').innerHTML= 'form nama sesuai yang diinputkan'+nama;
+        }
+        function opsi2go(){
+            if (document.getElementById('pilihan1ops1').checked==true){
+                document.getElementById('pilih1').style.display='none';
+                document.getElementById('pilih2').style.display='none';
+                document.getElementById('pilih3').style.display='block'
+            }
+            else if(document.getElementById('pilihan1ops2').checked==true){
+                document.getElementById('pilih1').style.display='none';
+                document.getElementById('pilih2').style.display='none';
+                document.getElementById('pilih4').style.display='block';
+            } 
+            else{
+                alert('isi terlebih dahulu')
+            }
+        }
+        function opsi3go(){
+            if (document.getElementById('pilihan2ops1').checked==true){
+                document.getElementById('pilih1').style.display='none';
+                document.getElementById('pilih2').style.display='none';
+                document.getElementById('pilih5').style.display='block';
+                document.getElementById('pilih3').style.display='block';
+            }
+            else if(document.getElementById('pilihan2ops2').checked==true){
+                document.getElementById('pilih1').style.display='none';
+                document.getElementById('pilih2').style.display='none';
+                document.getElementById('pilih6').style.display='block';
+            } 
+            else{
+                alert('isi terlebih dahulu')
+            }
+        }
+        var cek = '';
+        function checkbox(){
+            var nama = document.getElementById('nama').value;
+            var a = '<br> <b>Kasus konfirmasi</b> <br> SEGERA! konsultasikan dengan petugas setempat<br>';
+            var b = '<br><b>DISCARED</b><br>(BUKAN COVID-19)<br>-selalu jaga kesehatan<br>-terapkan protokol kesehatan dalam beraktivitas<br>'
+            var c = '<br>Anosmia (hilangnya kemampuan indra penciuman) atau ageusia(hilangnya indra perasa)<br>'
+            if (document.getElementById('positif').checked==true){
+                cek=cek+a
+            }
+            if (document.getElementById('negatif').checked==true) {
+                cek=cek+b
+            }
+            if (document.getElementById('anosmia').checked==true){
+                cek=cek+c
+            }
+            hasil = nama + ' Pilih keluhan anda:' + cek
+            document.getElementById('hasil').innerHTML= hasil
+
+        }
+        function goform(){
+            a = document.getElementById('form').style.display='block';
+            b = document.getElementById('form1').style.display='none';
+            document.getElementById('pilih3').style.display='none';
+            document.getElementById('pilih4').style.display='none';
+            document.getElementById('pilih5').style.display='none';
+            document.getElementById('pilih6').style.display='none';
+            document.getElementById('hasil').style.display='block'
+            document.getElementById('hasil2').style.display='none'
+
+        }
+    </script>
+    
+
+</body></html>

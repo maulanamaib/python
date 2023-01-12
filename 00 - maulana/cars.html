@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: rgb(0, 0, 0);
+}
+li {
+ float: left;
+}
+li a, .dropbtn {
+ display: inline-block;
+ color: white;
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+ background-color: red;
+}
+li.dropdown {
+ display: inline-block;
+}
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f9f9f9;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;}
+.dropdown-content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+ text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {
+ display: block;
+}
+body{
+ text-align: center;
+}
+img{
+ margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li class="dropdown">
+        <a href="#" class="dropbtn">Mitsubishi</a>
+        <div class="dropdown-content">
+            <a href="#">Mitsubishi Pajero Sport</a>
+            <a href="#">Mitsubishi Xpander Cross Rockford Fosgate Black Edition</a>
+            <a href="#">Mitsubishi Triton</a>
+        </div>
+    <li class="dropdown">
+        <a href="#" class="dropbtn"> Suzuki</a>
+        <div class="dropdown-content">
+            <a href="#">XL7</a>
+            <a href="#">Ertiga</a>
+            <a href="#">APV New Luxury</a>
+        </div>
+    <li class="dropdown">
+        <a href="#" class="dropbtn">Honda</a>
+        <div class="dropdown-content">
+            <a href="#">Honda Evo</a>
+            <a href="#">Honda Brio</a>
+            <a href="#">Honda Mobilio</a>
+        </div>
+    <li class="dropdown">
+        <a href="#" class="dropbtn">Toyota</a>
+        <div class="dropdown-content">
+            <a href="#">Inova</a>
+            <a href="#">Avanza</a>
+            <a href="#">Kijang</a>
+        </div>
+</li>
+</ul>
+<h1>Muscle Car</h1>
+<img src="https://autonetmagz.com/wp-content/uploads/2015/07/dodge-challenger-hellcat-x-805hp-demi-kegiatan-amal-charity-860x474.jpg" alt="Gambar Mobil">
+</body>
+</html>

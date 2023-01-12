@@ -1,0 +1,115 @@
+/* main / isi content */
+#gambar{
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: ;
+}
+
+h1{
+    display: inline-block;
+    width: 100%;
+    border-radius: 20px;
+    background-color: aqua;
+    text-align: center;
+}
+
+
+.kotak1{
+    width: 40%;
+    background-color: salmon;
+    float: left;
+}
+
+.kotak1 h4{
+    text-align: center;
+    line-height: 40%;
+}
+
+.kotak2{
+    width: 40%;
+    background-color: violet;
+    float: right;
+}
+
+.kotak2 h4{
+    text-align: center;
+    line-height: 40%;
+}
+/* navbar */
+.menu {
+    display: block;
+    background-color:#40e9b1;
+    height:46px;
+   }
+   
+   .content {
+    clear: both;
+    padding:5px 0;
+    min-height: 200px;
+   
+   }
+   
+   .footer {
+    clear: both;
+    margin-top:10px;
+    background-color: #eee;
+    padding:10px 8px;
+   }
+   
+   #navigasi {
+    position:relative;
+    line-height:30px;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    list-style-position:outside;
+   }
+   
+   #navigasi a {
+    display:block;
+    padding:8px 16px;
+    background-color:#40e9b1;
+    color:black;
+    text-decoration:none;
+   }
+   
+   #navigasi a:hover {
+    background-color:#40e9b1;
+    color:#fff;
+   }
+   
+   #navigasi li {
+    position:relative;
+    float:left;
+   }
+   
+   #navigasi ul {
+    position:absolute;
+    display:none;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    list-style-position:outside;
+   }
+   
+   #navigasi li ul a{
+    width:12em;
+    height:auto;
+    float:left;
+   }
+   
+   #navigasi li:hover ul{
+    display:block;
+   }
+   
+   #navigasi li:hover ul ul{
+    display:none;
+   }
+
+body{
+    background-color: seashell;
+}

@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="Minuman.css">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Minuman.js"></script>
+    <title>Beverages</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-light bg-info">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-expanded="false" aria-label="Toggle offcanvas">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <!--Filter-->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Filter</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+  <div class="list-group list-group-flush btn-group" role="group">
+  <input type="radio" class="btn-check" name="btnradio" id="all" autocomplete="off">
+  <label class="btn btn-outline-secondary" for="all">All</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="Coffee" autocomplete="off">
+  <label class="btn btn-outline-secondary" for="Coffee">Coffee</label>
+
+  <input type="radio" class="btn-check" name="btnradio" id="Non" autocomplete="off">
+  <label class="btn btn-outline-secondary" for="Non">Non-Coffee</label>
+    </div>
+    <br>
+    <button class="btn btn-secondary" onclick="filter()">Filter</button>
+  </div>
+  </div>
+  <!--Filter-->
+    <!-- Search-->
+<!-- Search-->
+    <div class="search">
+    <form class="d-flex">
+      <button class="btn btn-outline-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" id="filter"><img src="https://raw.githubusercontent.com/rahadis/webcafe/d5d1c921db462e5f96ad5a3b012dd24be5378fae/img/filter_alt_black_24dp.svg" width="30" height="25"></button>
+      <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Cari">
+      <button class="btn btn-outline-success" type="submit"><img src="https://raw.githubusercontent.com/rahadis/webcafe/aa0023f962f4b735edf9bef0c99b497dc7c72bcb/img/search.svg" width="30" height="25"></button>
+      <button class="btn btn-outline-danger" type="button" id="cart"><img src="https://raw.githubusercontent.com/rahadis/webcafe/444846b42ee6202888cd6920d891552532fdd194/img/cart2.svg" width="30" height="25"></button>
+    </form>
+    </div>
+    <!-- Search-->
+    <a href="Homepage.html">
+    <span class="navbar-brand mb-0 h1" id="logo">Onibus</span></a>
+    <!--Offcanvas-->
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menu</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!--Menu-->
+    <div class="list-group list-group-flush">
+    <a href="Homepage.html" class="list-group-item list-group-item-action">Home</a>
+    <a href="Makanan.html" class="list-group-item list-group-item-action ">Foods</a>
+    <a  href="Minuman.html" class="list-group-item list-group-item-action active" >Beverages</a>
+  </div>
+    <!--Menu-->
+  </div>
+  <!--Offcanvas-->
+</nav>
+
+<div class="main-content">
+<div class="container" id="coffee1">
+    <div class="card border border-5" style="width: 400px; right: 50px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/capo.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cappucino Hot </h5>
+          <p class="card-text">Espresso<br>
+           Susu Fullcream bulky foum<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+    </div>
+      <div class="card border border-5" style="width: 400px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/ice%20cap.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cappucino Ice</h5>
+          <p class="card-text">Espresso<br>
+           Susu Fullcream<br>
+           ice cube<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 50px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/latte-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Coffee latte</h5>
+          <p class="card-text">Espresso<br>
+           Susu Fullcream thin foam<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 100px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/ice%20latte.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Coffee latte Ice</h5>
+          <p class="card-text">Espresso<br>
+           Susu Full cream<br>
+           ice cube<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 150px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/lb.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Long black</h5>
+          <p class="card-text">Espresso<br>
+           water<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>    
+  </div>
+  <br>
+  <br>
+
+  <div class="container" id="coffee2">
+    <div class="card border border-5" style="width: 400px; right: 50px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/amer.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Americano </h5>
+          <p class="card-text">Espresso<br>
+           water<br>
+           15.000</p>
+          <button>Buy</button>
+        </div> 
+    </div>
+      <div class="card border border-5" style="width: 400px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/v60.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">V60</h5>
+          <p class="card-text">manual brew<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 50px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/japa.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">japanese</h5>
+          <p class="card-text">manual brew<br>
+           ice cube<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 100px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/french-1-1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">French press</h5>
+          <p class="card-text">Manual brew<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 150px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/viet.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Vietnam drip</h5>
+          <p class="card-text">manual brew<br>
+           (SKM)Susu Kental Manis<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>    
+  </div><br><br>
+  <div class="container" id="coffee3">
+    <div class="card border border-5" style="width: 400px; right: 50px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/esp.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Espresso </h5>
+          <p class="card-text">inti sari coffeee<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+    </div>
+      <div class="card border border-5" style="width: 400px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/tbrk.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tubruk</h5>
+          <p class="card-text">Manual brew<br>
+           Susu Fullcream<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 50px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/mcc.jpg " class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Macchiato</h5>
+          <p class="card-text">Espresso<br>
+           Susu Fullcream<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 100px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/tbrss.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Tubruk Susu</h5>
+          <p class="card-text">Espresso<br>
+           Susu Fullcream<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>
+      <div class="card border border-5" style="width: 400px;left: 150px;">
+        <img src="https://raw.githubusercontent.com/rahadis/webcafe/e683bda0125b04ce496e1e18ac660d58d7bc25d4/img/affogato.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Affogato</h5>
+          <p class="card-text">Espresso<br>
+           Susu Fullcream<br>
+           15.000</p>
+          <button>Buy</button>
+        </div>
+      </div>    
+    </div><br><br>
+    <div class="container" id="noncoffee">
+      <div class="card border border-5" style="width: 400px; right: 50px;">
+          <img src="http://inibaru.id/nuploads/1/Recipe_Greenteamatchalatte.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Green Tea Latte </h5>
+            <p class="card-text">powder green tea, ice, dan susu yang diproses mixing<br>
+             15.000</p>
+             <br>
+            <button>Buy</button>
+          </div>
+      </div>
+        <div class="card border border-5" style="width: 400px;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWXQts7RaGbEr2rSuUPeOV1z0MlT3qaYMowQ&usqp=CAU" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Taro Latte</h5>
+            <p class="card-text">minuman ekstrak buah talas<br>
+            yang dihias susu yang di-froth<br>
+             15.000</p>
+             <br>
+            <button>Buy</button>
+          </div>
+        </div>
+        <div class="card border border-5" style="width: 400px;left: 50px;">
+          <img src="https://asset.kompas.com/crops/Mg6ofi3s7Gh47sgVkOTXn_34EUs=/0x0:0x0/750x500/data/photo/2020/04/16/5e986b693a892.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">vanilla latte</h5>
+            <p class="card-text">vanilla cake hazelnut<br>
+             Susu Fullcream<br>
+             15.000</p>
+             <br>
+            <button>Buy</button>
+          </div>
+        </div>
+        <div class="card border border-5" style="width: 400px;left: 100px;">
+          <img src="https://freshpowderdrink.com/wp-content/uploads/2021/02/RED-VELVET-DRINK-min.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">red velvet</h5>
+            <p class="card-text">warna merah ini dari beet-juice<br>
+                yang alami, serta memiliki karakter manis dan earthy.
+                <br>
+             15.000</p>
+            <button>Buy</button>
+          </div>
+        </div>
+        <div class="card border border-5" style="width: 400px;left: 150px;">
+          <img src="https://asset.kompas.com/crops/aP_98iCv79Qo41hFBjRvIQ8YyG8=/0x0:1000x667/750x500/data/photo/2019/09/26/5d8c4fff5f34c.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Boba</h5>
+            <p class="card-text">bola tapioka yang sering menjadi <br>
+             isian dari minuman bubble tea.<br>
+             15.000</p>
+            <button>Buy</button>
+          </div>
+        </div>    
+        </div>
+      </div>
+  </div>
+</div>
+  </body>
+</html>`

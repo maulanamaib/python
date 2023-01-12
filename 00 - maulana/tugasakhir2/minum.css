@@ -1,0 +1,7 @@
+div.border{
+    border: black;
+}
+
+div.image{
+    background-image: url("img/cafe.jpg");
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    center{
+      background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.kolpaper.com%2Fwp-content%2Fuploads%2F2020%2F04%2Fvalorant-wallpaper-4k-scaled.jpg&f=1&nofb=1);
+      color: azure;
+    }
+  </style>
+<head>
+	<title>3A</title>
+	<script type="text/javascript">
+		function perulangan()
+		{
+        var teks = document.getElementById("teks").value;
+        var angka = document.getElementById("angka").value;
+        var hasil = "";
+        var x;
+        for (x = 1; x <= angka; x++) {
+          hasil += teks + "<br>";
+        }
+        document.write(hasil);
+      }
+	</script>
+</head>
+<body>
+  <center>
+	<label> Teks  : <input type="text" id="teks"></label>
+	<br>
+    <label> Angka : <input type="text" id="angka"></label>
+    <br>
+    <button onclick="perulangan()">Submit</button>
+  </center>
+</body>
+</html>

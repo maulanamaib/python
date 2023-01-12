@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        center{
+            background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP._ixtCR47plJzA_ly6slChgAAAA%26pid%3DApi&f=1);
+        }
+
+
+    </style>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>
+      $(document).ready(function () {   
+        $("#tombol").click(function () {
+          var nama = $("#nama").val();
+          var bil = parseInt($("#bil").val());
+          var hasil = "";
+          for (var i = 0; i < 2*bil; i++) {
+            hasil += nama + "\n";
+          }
+          $("#hasil").text(hasil);
+        });
+      });
+    </script>
+</head>
+<body>
+    <center>
+    <label> Nama: 
+    	<input type="text" id="nama"> 
+    </label>
+    <br>
+    <label>Bilangan: 
+    	<input type="text" id="bil">
+    </label>
+    <br>
+    <textarea name="hasil" id="hasil" cols="10" rows="10"></textarea><br>
+    <button id="tombol">Submit</button>
+    </center>
+</body>
+</html>
